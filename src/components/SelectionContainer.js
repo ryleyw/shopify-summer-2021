@@ -24,8 +24,10 @@ function SelectionContainer(props) {
     useEffect(() => {
         if(picks.length==5) {
             props.setDone(true)
+            props.updateRemaining(picks.length)
         } else{
             props.setDone(false)
+            props.updateRemaining(picks.length)
         }
     }, [picks])
 
@@ -48,6 +50,7 @@ function SelectionContainer(props) {
 
     return(
         <div className="selectionControls">
+
             <Grid fluid>
                 <Row>
                     <Col sm={12} md={6}>

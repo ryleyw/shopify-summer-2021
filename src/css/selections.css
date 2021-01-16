@@ -4,7 +4,7 @@
     border-radius: 15px;
     width: 80%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 10px;
     background-color: black;
     background: rgba(0, 0, 0, 0.1);
 }
@@ -20,6 +20,7 @@
     box-shadow: gray 2px 3px 4px 2px;
     background-color: #181123;
     color: gold;
+    overflow-y: scroll;
 
 }
 
@@ -40,6 +41,8 @@
     background-color: #181123;
     overflow-y: scroll;
 }
+
+
 
 .searchField {
     resize: none;
@@ -71,8 +74,24 @@
     background-color: #181123;
 }
 
+.pickResult {
+    width: 100%;
+    height: 210px;
+    position: relative;
+    text-align: left;
+    border-bottom: solid gold 1px;
+    background-color: #181123;
+    transition: 0.2s;
+}
+
 .resultInfo {
     margin-left: 125px;
+    margin-right: 125px;
+    padding-top: 15px;
+}
+
+.pickInfo {
+    margin-left: 160px;
     margin-right: 125px;
     padding-top: 15px;
 }
@@ -91,7 +110,28 @@
 
 }
 
+.pickTitle {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 20pt;
+    font-style: italic;
+    background-image: linear-gradient(45deg, #FCF6BA,#BF953F);
+    width: fit-content;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+}
+
 .resultYear {
+    font-family: 'Open Sans', sans-serif;
+    color: gray;
+    font-weight: 800;
+    font-size: 12pt;
+    font-style: italic;
+}
+
+.pickYear {
     font-family: 'Open Sans', sans-serif;
     color: gray;
     font-weight: 800;
@@ -104,6 +144,11 @@
       font-size: 12pt;
       float: none;
     }
+
+    .pickTitle {
+        font-size: 12pt;
+        float: none;
+    }
 }
 
 .resultPoster {
@@ -113,4 +158,52 @@
     overflow-x: hidden;
     position: absolute;
     left: 0;
+}
+
+.spacer {
+    height: 60px;
+    padding-top: 40px;
+    margin:auto;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.pickCounter {
+    margin-top: -40px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 16pt;
+}
+
+.count {
+    color: #181123;
+    font-size: 32pt;
+}
+
+.pickPoster {
+    height: 210px;
+    width: 100%;
+    max-width: 140px;
+    overflow-x: hidden;
+    position: absolute;
+    left: 0;
+}
+
+.noneFound {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+    color: #BF953F;
+    padding-top: 100px;
+}
+
+.doneBanner {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 20pt;
+    height: 50px;
+    transition: 0.2s ease-in-out;
+    padding-top: 0px;
+    margin-top:-50px;
+    color: #181123;
+
 }

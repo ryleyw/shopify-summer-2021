@@ -31,7 +31,7 @@ const useStyles = makeStyles({
 
 function SearchResult(props) {
 
-    const classes = useStyles(props.lockAdd)
+    const classes = useStyles()
     const [posterURL, setPosterURL] = useState(props.info.Poster)
 
     const onError = () => {
@@ -48,15 +48,16 @@ function SearchResult(props) {
     return (
 
         <div className="searchResult">
-            <img className="resultPoster" onError={onError} src={posterURL}/>
+            <img className="resultPoster" onError={onError} key={posterURL} src={posterURL}/>
             <div className="resultInfo">
                 <div className="resultTitle">{props.info.Title}</div>
                 <div className="resultYear">{props.info.Year}</div>
             </div>
             <div className="addContainer">
                 {props.added ?
-                <IconButton className={classes.button}>
-                    <RemoveIcon className={classes.icon} onClick={handleRemove}/>
+                <IconButton className={classes.button} disabled={props.added}>
+                    {/* onClick={handleRemove} */}
+                    <BlockIcon className={classes.icon} />
                 </IconButton>
                 :
                 <IconButton className={classes.button} onClick={handleAdd} disabled={props.lockAdd}>

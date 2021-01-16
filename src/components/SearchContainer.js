@@ -82,15 +82,17 @@ function SearchContainer(props) {
             </div>
             <div className="searchResults">
                 {searchLoading ?
-                    <SyncLoader color='gold'/>
+                    <div className="noneFound">    
+                        <SyncLoader color='#BF953F'/>
+                    </div>
                 :
                     <div className="resultsContainer">
-                        {!notFound ?
+                        {(!notFound || displayResults.length == 0) ?
                             <div>                        
                                 {displayResults}
                             </div>
                             :
-                            <div>
+                            <div className="noneFound">
                                 No results found!
                             </div>
                         }
