@@ -41,7 +41,7 @@ function SearchContainer(props) {
     useEffect(() => {
         if (searchTerm.length > 0) {
             setSearchLoading(true)
-            const url = `http://www.omdbapi.com/?apikey=${APIKey}`
+            const url = `https://www.omdbapi.com/?apikey=${APIKey}`
             const fullUrl = url.concat(`&s=${searchTerm}&type=movie&r=json`)
             console.log(fullUrl)
             axios.get(fullUrl).then(function(response){
