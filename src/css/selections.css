@@ -55,7 +55,7 @@
     border-radius: 15px;
     outline: none;
     float: left;
-    margin-left: 25px;
+    margin-left: 50px;
     white-space: nowrap;
     background-color: #181123;
     color: #BF953F;
@@ -149,6 +149,9 @@
         font-size: 12pt;
         float: none;
     }
+    .searchContainer {
+        margin-top: 50px;
+    }
 }
 
 .resultPoster {
@@ -193,7 +196,7 @@
     font-family: 'Open Sans', sans-serif;
     font-size: 16pt;
     color: #BF953F;
-    padding-top: 100px;
+    padding-top: 150px;
 }
 
 .doneBanner {
@@ -205,5 +208,16 @@
     padding-top: 0px;
     margin-top:-50px;
     color: #181123;
+    visibility: hidden;
+}
 
+.noPicks {
+    margin-top: 175px;
+    color: gray;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16pt;
+}
+
+.movieIcon {
+    font-size: 32pt;
 }

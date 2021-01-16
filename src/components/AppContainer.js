@@ -1,3 +1,4 @@
+import { Visibility } from '@material-ui/icons'
 import { AnimatePresence, motion } from 'framer-motion'
 import React, {useEffect, useState} from 'react'
 
@@ -57,7 +58,7 @@ function AppContainer(props) {
                 </div>
             </div>
             { done ?
-                <div style={{marginTop: 0, paddingTop:'50px'}}className="doneBanner">You have made your selections! Thank you for participating.</div>
+                <div style={{marginTop: 0, paddingTop:'50px', visibility: 'visible'}}className="doneBanner">You have made your selections! Thank you for participating.</div>
                 :
                 <div className="doneBanner">You have made your selections! Thank you for participating.</div>
             }

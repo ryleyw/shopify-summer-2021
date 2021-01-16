@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 import {IconButton, makeStyles} from '@material-ui/core'
+import TheatersIcon from '@material-ui/icons/Theaters';
 import RemoveIcon from '@material-ui/icons/Remove'
 import Pick from './Pick'
 
@@ -35,7 +36,21 @@ function DisplayPicks(props) {
     return(
         <div className="displayContainer">
             <div className="listPicks">
-                {pickList}
+                {pickList.length==0 ?
+                    <div className="noPicks">
+                        <div className="movieIcon">
+                            <TheatersIcon fontSize='inherit'/>
+                        </div>
+                        <div className="noPickText">
+                            Your picks will show here!
+                        </div>
+                    </div>
+                :
+                    <div>
+                    {pickList}
+                    </div>
+
+                }
             </div>
         </div>
     )

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import {TextField, IconButton, makeStyles} from '@material-ui/core'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import SearchIcon from '@material-ui/icons/Search';
 import SyncLoader from 'react-spinners/SyncLoader'
 import axios from 'axios'
 import SearchResult from './SearchResult'
@@ -18,6 +19,13 @@ const useStyles = makeStyles({
         fontSize: '19pt',
         color: '#BF953F',
         borderRadius: '12px'
+    },
+    searchIcon: {
+        position: 'absolute',
+        left: 10,
+        top: 7,
+        color: "#BF953F",
+        fontSize: '26pt'
     }
 })
 
@@ -31,7 +39,7 @@ function SearchContainer(props) {
     const classes = useStyles()
 
     useEffect(() => {
-        if (searchTerm.length > 2) {
+        if (searchTerm.length > 0) {
             setSearchLoading(true)
             const url = `http://www.omdbapi.com/?apikey=${APIKey}`
             const fullUrl = url.concat(`&s=${searchTerm}&type=movie&r=json`)
@@ -78,6 +86,7 @@ function SearchContainer(props) {
     return(
         <div className="searchContainer">
             <div className="searchBar">
+                <SearchIcon className={classes.searchIcon}/>
                 <textarea className="searchField" placeholder="Start searching!" onChange={(e)=>setSearchTerm(e.target.value)}/>
             </div>
             <div className="searchResults">
