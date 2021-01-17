@@ -56,6 +56,10 @@ function AppContainer(props) {
                 <div className="headerTitle">
                     Shoppies
                 </div>
+                <a href="https://github.com/ryleyw/shopify-summer-2021" target="_blank">
+                    <img className="headerImage" src={process.env.PUBLIC_URL + '/github.png'}/>
+                </a>
+                
             </div>
             { done ?
                 <div style={{marginTop: 0, paddingTop:'50px', visibility: 'visible'}}className="doneBanner">You have made your selections! Thank you for participating.</div>

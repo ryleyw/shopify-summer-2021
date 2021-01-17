@@ -6,6 +6,7 @@
   width: 100%;
   background-color: #181123;
   height: 50px;
+  position: relative;
 }
 
 .headerTitle {
@@ -23,6 +24,14 @@
   margin-left: 12%;
 }
 
+.headerImage {
+  position: absolute;
+  top: 0;
+  padding-top: 5px;
+  margin-left: 10px;
+  height: 40px;
+  left: 0;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
